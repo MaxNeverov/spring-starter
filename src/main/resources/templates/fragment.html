@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragments</title>
+</head>
+<body>
+<div th:fragment="header">
+    <!--        отображение имени текущего пользователя, который прошел аутентификацию-->
+    <!--        пакет - "org.thymeleaf.extras:thymeleaf-extras-springsecurity5"-->
+    <span th:text="${#authentication.getAuthorities()}">Role</span>
+    <span th:text="${#authentication.getName()}">Username</span>
+
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+    </form>
+    <div th:insert="~{fragment :: locale}"></div>
+</div>
+
+<div th:fragment="locale" >
+    <form action="">
+        <select name="lang" onchange="this.form.submit()">
+            <option></option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+        </select>
+    </form>
+</div>
+
+</body>
+</html>
