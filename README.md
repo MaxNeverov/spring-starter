@@ -1,4 +1,4 @@
-(Gradle, PostgreSQL, Spring-boot, web, security, data-jpa)/n
+(Gradle, PostgreSQL, Spring-boot, web, security, data-jpa)  
 Функционал(визуал в браузере примитивный):
 -вывод списком пользователей из БД в браузер + возможность зайти в профиль каждого пользователя (только если права доступа АДМИН)
 -регистрация пользователей в браузере и добавление в БД. Реализованы CRUD - операции (create, update, delete) 
